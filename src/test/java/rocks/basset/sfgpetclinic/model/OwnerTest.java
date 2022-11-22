@@ -2,6 +2,8 @@ package rocks.basset.sfgpetclinic.model;
 
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 import static org.junit.jupiter.api.Assertions.*;
 
 class OwnerTest {
@@ -23,5 +25,7 @@ class OwnerTest {
                             () -> assertEquals("Key West", o.getCity(), "City did not match"),
                             () -> assertEquals("1231231234", o.getTelephone()));
                 });
+
+        assertThat(o.getCity(), is("Key West"));
     }
 }
