@@ -2,13 +2,14 @@ package rocks.basset.sfgpetclinic.model;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import rocks.basset.sfgpetclinic.ControllerTests;
+import rocks.basset.sfgpetclinic.ModelTests;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.junit.jupiter.api.Assertions.*;
 
-@Tag("model")
-class OwnerTest {
+class OwnerTest implements ModelTests {
 
     @Test
     void dependentAssertions(){

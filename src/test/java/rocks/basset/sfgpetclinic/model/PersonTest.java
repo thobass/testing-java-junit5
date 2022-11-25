@@ -2,12 +2,13 @@ package rocks.basset.sfgpetclinic.model;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import rocks.basset.sfgpetclinic.ControllerTests;
+import rocks.basset.sfgpetclinic.ModelTests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Tag("model")
 
-class PersonTest {
+class PersonTest implements ModelTests {
 
     @Test
     void groupAssertions(){

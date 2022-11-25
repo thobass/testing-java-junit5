@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import rocks.basset.sfgpetclinic.ControllerTests;
 import rocks.basset.sfgpetclinic.fauxspring.Model;
 import rocks.basset.sfgpetclinic.fauxspring.ModelMapImpl;
 import rocks.basset.sfgpetclinic.model.Speciality;
@@ -19,8 +20,7 @@ import java.util.Set;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
-@Tag("controllers")
-class VetControllerTest {
+class VetControllerTest  implements ControllerTests {
 
     VetController controller;
 

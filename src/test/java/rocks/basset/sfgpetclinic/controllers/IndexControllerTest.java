@@ -2,6 +2,7 @@ package rocks.basset.sfgpetclinic.controllers;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.*;
+import rocks.basset.sfgpetclinic.ControllerTests;
 
 import java.time.Duration;
 
@@ -9,8 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
-@Tag("controllers")
-class IndexControllerTest {
+class IndexControllerTest implements ControllerTests {
 
     IndexController controller;
 
