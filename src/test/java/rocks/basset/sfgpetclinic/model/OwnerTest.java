@@ -1,7 +1,10 @@
 package rocks.basset.sfgpetclinic.model;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import rocks.basset.sfgpetclinic.ControllerTests;
 import rocks.basset.sfgpetclinic.ModelTests;
 
@@ -30,5 +33,12 @@ class OwnerTest implements ModelTests {
                 });
 
         assertThat(o.getCity(), is("Key West"));
+    }
+
+    @DisplayName("Value Source Test")
+    @ParameterizedTest(name= ParameterizedTest.DISPLAY_NAME_PLACEHOLDER + " - " + ParameterizedTest.DEFAULT_DISPLAY_NAME)
+    @ValueSource(strings = {"Spring","Framework","Guru"})
+    void testValueSource(String val){
+        System.out.println(val);
     }
 }
