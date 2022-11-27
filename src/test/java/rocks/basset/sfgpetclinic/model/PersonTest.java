@@ -1,9 +1,6 @@
 package rocks.basset.sfgpetclinic.model;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import rocks.basset.sfgpetclinic.ControllerTests;
 import rocks.basset.sfgpetclinic.ModelTests;
 
@@ -38,8 +35,12 @@ class PersonTest implements ModelTests {
             + RepeatedTest.CURRENT_REPETITION_PLACEHOLDER + " - "
             + RepeatedTest.TOTAL_REPETITIONS_PLACEHOLDER)
     @DisplayName("My repeated test")
-    @Test
     void myRepeatedTest(){
-        //Todo impk
+        //Todo impl
+    }
+
+    @RepeatedTest(5)
+    void myRepeatedTestWithDI(TestInfo testInfo, RepetitionInfo repetitionInfo){
+        System.out.println(testInfo.getDisplayName() + " : " + repetitionInfo.getCurrentRepetition());
     }
 }
