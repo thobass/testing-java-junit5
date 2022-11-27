@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 import rocks.basset.sfgpetclinic.ControllerTests;
+import rocks.basset.sfgpetclinic.CustomArgsProvider;
 import rocks.basset.sfgpetclinic.ModelTests;
 
 import java.util.stream.Stream;
@@ -73,6 +74,13 @@ class OwnerTest implements ModelTests {
     @ParameterizedTest(name= ParameterizedTest.DISPLAY_NAME_PLACEHOLDER + " - " + ParameterizedTest.DEFAULT_DISPLAY_NAME)
     @MethodSource("getArgs")
     void testFromMethodProvider(String stateName, int val1, int val2){
+        System.out.println(stateName + " = " + val1 + " : " + val2);
+    }
+
+    @DisplayName("Custom Provider Source Test")
+    @ParameterizedTest(name= ParameterizedTest.DISPLAY_NAME_PLACEHOLDER + " - " + ParameterizedTest.DEFAULT_DISPLAY_NAME)
+    @ArgumentsSource(CustomArgsProvider.class)
+    void testFromCustomProvider(String stateName, int val1, int val2){
         System.out.println(stateName + " = " + val1 + " : " + val2);
     }
 
