@@ -2,9 +2,12 @@ package rocks.basset.sfgpetclinic.services.springdatajpa;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import rocks.basset.sfgpetclinic.extension.TimingExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@ExtendWith(TimingExtension.class)
 class PetTypeSDJpaServiceTestIT {
 
     @BeforeEach
